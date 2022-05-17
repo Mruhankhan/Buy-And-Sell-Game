@@ -1,0 +1,8 @@
+#full {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr 2fr 3.5fr;
+  grid-template-rows: 11fr 9fr repeat(3, 1fr);
+  grid-column-gap: 20;
+  grid-row-gap: 20;
+  background-color: rgba(255, 0, 0, 0.7);
+}
