@@ -15,9 +15,9 @@ let appleBuy = document.getElementById("apple-company-div-buy")
 let privateSell = document.getElementById("private-jet-div-sell")
 let privateBuy = document.getElementById("private-jet-div-buy")
 let yourMoneyChanging = document.getElementById("your-money-changing")
-
-let money = 10000
-
+let reset = document.getElementById("reset")
+let double = document.getElementById("double")
+let money = 0
 hondaSell.addEventListener("click", () => {
   addMoney(20000)
 })
@@ -81,6 +81,16 @@ privateBuy.addEventListener("click", () => {
   buyStuff(1000000)
 })
 
+reset.addEventListener("click", () => {
+  yourMoneyChanging.innerHTML  = money*0
+})
+
+double.addEventListener("click", () => {
+    yourMoneyChanging.innerHTML = money* 2
+    document.body.style.backgroundColor = "green" 
+})
+
+
 function addMoney(amount) {
   money = money + amount
   yourMoneyChanging.innerHTML = money
@@ -90,3 +100,5 @@ function buyStuff(amount) {
   money = money - amount
   yourMoneyChanging.innerHTML = money
 }
+
+
